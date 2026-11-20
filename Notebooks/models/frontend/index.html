@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Air Quality Prediction</h1>
+        <p>Prediction and Pollution Episode Detection System</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Enter Air Quality Parameters</h2>
+
+        <form id="predictionForm">
+
+            <label>CO Sensor Reading</label>
+            <input type="number" id="PT08_S1_CO" step="any" required>
+
+            <label>NOx Sensor Reading</label>
+            <input type="number" id="PT08_S3_NOx" step="any" required>
+
+            <label>NO2 Sensor Reading</label>
+            <input type="number" id="PT08_S4_NO2" step="any" required>
+
+            <label>O3 Sensor Reading</label>
+            <input type="number" id="PT08_S5_O3" step="any" required>
+
+            <label>Temperature</label>
+            <input type="number" id="Temperature" step="any" required>
+
+            <label>Relative Humidity</label>
+            <input type="number" id="Relative_Humidity" step="any" required>
+
+            <label>Absolute Humidity</label>
+            <input type="number" id="Absolute_Humidity" step="any" required>
+
+            <label>Benzene Lag 1</label>
+            <input type="number" id="C6H6_lag1" step="any" required>
+
+            <label>Benzene Lag 2</label>
+            <input type="number" id="C6H6_lag2" step="any" required>
+
+            <label>Benzene Lag 3</label>
+            <input type="number" id="C6H6_lag3" step="any" required>
+
+            <label>Benzene Lag 24</label>
+            <input type="number" id="C6H6_lag24" step="any" required>
+
+            <label>Hour (0–23)</label>
+            <input type="number" id="hour" min="0" max="23" required>
+
+            <label>Actual Benzene Reading (Optional)</label>
+            <input type="number" id="actual_benzene" step="any">
+
+            <button type="submit">Predict Air Quality</button>
+
+        </form>
+
+        <section id="results" class="results" hidden>
+            <h2>Prediction Results</h2>
+            <p id="predicted"></p>
+            <p id="pollution"></p>
+            <p id="anomaly"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Air Quality Prediction and Pollution Episode Detection</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
